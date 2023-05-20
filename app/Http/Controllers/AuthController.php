@@ -56,6 +56,12 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
+
+        $price = formatNumber(10000000, 'IDR');
+        sendNotifSlack();
+        print_r($price);
+        die();
+
         $this->validate($request, [
             'email' => 'required|string',
             'password' => 'required|string',

@@ -20,7 +20,11 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files" : [
+            "app/Helper/Slack.php",
+            "app/Helper/Price.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [
