@@ -104,19 +104,23 @@ return $this->respondWithToken($token);
     	
 	$validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:6|confirmed',
         ]);
-		
-	if($validator->fails()){
-            return response()->json([
-            	'status' => 'error',
-            	'success' => false,
-                'error' =>
-                $validator->errors()->toArray()
-            ], 400);
-        }
-		
+
+        // notification("Gagal Register",$validator->errors()->toArray());
+        // // print_r( $validator->errors()->toArray());
+        // die();
+
+	// if($validator->fails()){
+    //     return response()->json([
+    //         'status' => 'error',
+    //         'success' => false,
+    //         'error' =>
+    //         $validator->errors()->toArray()
+    //     ], 400);
+    // }
+		try{
 	$user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
@@ -127,6 +131,14 @@ return $this->respondWithToken($token);
 	    'message' => 'User created.',
             'user' => $user
         ]);	
-    }
+    }catch(\Exception $e){
+        notification("Gagal Register",$e);
+        return response()->json([
+            'message' => 'User failed created.',
+            ],400);	
+
+    
+ }
+   }
 	
 }
