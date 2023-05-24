@@ -30,20 +30,18 @@ class AuthController extends Controller
     */
    public function login()
    {
-       $credentials = request(['email', 'password']);
+        $credentials = request(['email', 'password']);
 
+        $token = auth()->attempt($credentials);
 
-    //    if (! $token = auth()->attempt($credentials)) {
-    //        return response()->json(['error' => 'Unauthorized'], 401);
-    //    }
+        if($token === false){
 
-       $token = auth()->attempt($credentials);
-if($token === false){
-    return response()->json(['error' => 'Unauthorized'], 401);
-}
-return $this->respondWithToken($token);
+            return response()->json(['error' => 'Unauthorized'], 401);
 
-    //    return $this->respondWithToken($token);
+        }
+        
+        return $this->respondWithToken($token);
+
    }
 
 
@@ -66,7 +64,6 @@ return $this->respondWithToken($token);
    public function logout()
    {
        auth()->logout();
-
 
        return response()->json(['message' => 'Successfully logged out']);
    }

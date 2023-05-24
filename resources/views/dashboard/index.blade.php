@@ -16,16 +16,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{URL::asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
 
 
 
         <!-- App css -->
-        <link href="{{URL::asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{URL::asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{URL::asset('assets/css/metisMenu.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/css/metisMenu.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="https://mannatthemes.com/dastone/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-        <link href="{{URL::asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -36,11 +36,11 @@
             <div class="brand">
                 <a href="index-2.html" class="logo">
                     <span>
-                        <img src="{{URL::asset('assets/images/logo-sm.png')}}"" alt="logo-small" class="logo-sm">
+                        <img src="{{asset('assets/images/logo-sm.png')}}"" alt="logo-small" class="logo-sm">
                     </span>
                     <span>
-                        <img src="{{URL::asset('assets/images/logo.png')}}"" alt="logo-large" class="logo-lg logo-light">
-                        <img src="{{URL::asset('assets/images/logo-dark.png')}}"" alt="logo-large" class="logo-lg logo-dark">
+                        <img src="{{asset('assets/images/logo.png')}}"" alt="logo-large" class="logo-lg logo-light">
+                        <img src="{{asset('assets/images/logo-dark.png')}}"" alt="logo-large" class="logo-lg logo-dark">
                     </span>
                 </a>
             </div>
@@ -307,7 +307,7 @@
                                         <small class="float-end text-muted ps-2">10 min ago</small>
                                         <div class="media">
                                             <div class="avatar-md bg-soft-primary">
-                                                <img src="{{URL::asset('assets/images/users/user-4.jpg')}}"" alt="" class="thumb-sm rounded-circle">
+                                                <img src="{{asset('assets/images/users/user-4.jpg')}}"" alt="" class="thumb-sm rounded-circle">
                                             </div>
                                             <div class="media-body align-self-center ms-2 text-truncate">
                                                 <h6 class="my-0 fw-normal text-dark">Meeting with designers</h6>
@@ -333,7 +333,7 @@
                                         <small class="float-end text-muted ps-2">1 hr ago</small>
                                         <div class="media">
                                             <div class="avatar-md bg-soft-primary">
-                                                <img src="{{URL::asset('assets/images/users/user-5.jpg')}}"" alt="" class="thumb-sm rounded-circle">
+                                                <img src="{{asset('assets/images/users/user-5.jpg')}}"" alt="" class="thumb-sm rounded-circle">
                                             </div>
                                             <div class="media-body align-self-center ms-2 text-truncate">
                                                 <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
@@ -366,7 +366,7 @@
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="false" aria-expanded="false">
                                 <span class="ms-1 nav-user-name hidden-sm">Nick</span>
-                                <img src="{{URL::asset('assets/images/users/user-5.jpg')}}"" alt="profile-user" class="rounded-circle thumb-xs" />                                 
+                                <img src="{{asset('assets/images/users/user-5.jpg')}}"" alt="profile-user" class="rounded-circle thumb-xs" />                                 
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="pages-profile.html"><i data-feather="user" class="align-self-center icon-xs icon-dual me-1"></i> Profile</a>
@@ -512,7 +512,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="media">
-                                                <img src="{{URL::asset('assets/images/money-beg.png')}}"" alt="" class="align-self-center" height="40">
+                                                <img src="{{asset('assets/images/money-beg.png')}}"" alt="" class="align-self-center" height="40">
                                                 <div class="media-body align-self-center ms-3"> 
                                                     <h6 class="m-0 font-20">$1850.00</h6>
                                                     <p class="text-muted mb-0">Total Revenue</p>                                                                                                                                               
@@ -657,7 +657,7 @@
                                                 <tr>                                                        
                                                     <td>
                                                         <div class="media">
-                                                            <img src="{{URL::asset('assets/images/products/01.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
+                                                            <img src="{{asset('assets/images/products/01.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
                                                             <div class="media-body align-self-center"> 
                                                                 <h6 class="m-0">Dastone Camera EDM 5D(White)</h6>
                                                                 <a href="#" class="font-12 text-primary">ID: A3652</a>                                                                                           
@@ -675,7 +675,7 @@
                                                 <tr>                                                        
                                                     <td>
                                                         <div class="media">
-                                                            <img src="{{URL::asset('assets/images/products/02.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
+                                                            <img src="{{asset('assets/images/products/02.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
                                                             <div class="media-body align-self-center"> 
                                                                 <h6 class="m-0">Dastone Shoes Max-Zon</h6>
                                                                 <a href="#" class="font-12 text-primary">ID: A5002</a>                                                                                          
@@ -693,7 +693,7 @@
                                                 <tr>                                                        
                                                     <td>
                                                         <div class="media">
-                                                            <img src="{{URL::asset('assets/images/products/04.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
+                                                            <img src="{{asset('assets/images/products/04.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
                                                             <div class="media-body align-self-center"> 
                                                                 <h6 class="m-0">Dastone Mask N99 [ISI]</h6>
                                                                 <a href="#" class="font-12 text-primary">ID: A6598</a>                                                                                           
@@ -711,7 +711,7 @@
                                                 <tr>                                                        
                                                     <td>
                                                         <div class="media">
-                                                            <img src="{{URL::asset('assets/images/products/img-5.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
+                                                            <img src="{{asset('assets/images/products/img-5.png')}}"" height="30" class="me-3 align-self-center rounded" alt="...">
                                                             <div class="media-body align-self-center"> 
                                                                 <h6 class="m-0">Dastone Bag (Blue)</h6>
                                                                 <a href="#" class="font-12 text-primary">ID: A9547</a>                                                                                            
@@ -752,19 +752,19 @@
 
 
         <!-- jQuery  -->
-        <script src="{{URL::asset('assets/js/jquery.min.js')}}"></script>
-        <script src="{{URL::asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{URL::asset('assets/js/metismenu.min.js')}}"></script>
-        <script src="{{URL::asset('assets/js/waves.js')}}"></script>
-        <script src="{{URL::asset('assets/js/feather.min.js')}}"></script>
-        <script src="{{URL::asset('assets/js/simplebar.min.js')}}"></script>
-        <script src="{{URL::asset('assets/js/moment.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/js/metismenu.min.js')}}"></script>
+        <script src="{{asset('assets/js/waves.js')}}"></script>
+        <script src="{{asset('assets/js/feather.min.js')}}"></script>
+        <script src="{{asset('assets/js/simplebar.min.js')}}"></script>
+        <script src="{{asset('assets/js/moment.js')}}"></script>
         <script src="https://mannatthemes.com/dastone/plugins/daterangepicker/daterangepicker.js"></script>
 
         <script src="https://mannatthemes.com/dastone/plugins/apex-charts/apexcharts.min.js"></script>
-        <script src="{{URL::asset('assets/pages/jquery.sales_dashboard.init.js')}}"></script>
+        <script src="{{asset('assets/pages/jquery.sales_dashboard.init.js')}}"></script>
 
-        <script src="{{URL::asset('assets/js/app.js')}}"></script>
+        <script src="{{asset('assets/js/app.js')}}"></script>
         
     </body>
 

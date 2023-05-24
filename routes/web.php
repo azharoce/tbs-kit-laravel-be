@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard/index');
-    // return view('welcome');
+    return view('welcome');
 });
+
+
+Route::get('/layout', function () {
+    return view('dashboard.index');
+});
+
