@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('special_role', function (Blueprint $table) {
-            $table->integer('id')->primary();
-            $table->unsignedBigInteger('id_user')->nullable()->index('id_user');
-            $table->integer('id_permissions')->nullable()->index('id_permissions');
+        Schema::create('role', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->string('name')->nullable();
+            $table->string('code')->nullable();
+            $table->tinyInteger('status')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('special_role');
+        Schema::dropIfExists('role');
     }
 };

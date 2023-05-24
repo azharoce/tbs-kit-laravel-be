@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('permissions_menu', function (Blueprint $table) {
-            $table->integer('id')->primary();
-            $table->integer('id_menu')->nullable()->index('id_menu');
+        Schema::create('special_role', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->unsignedBigInteger('id_user')->nullable()->index('special_role_user__fk');
             $table->integer('id_permissions')->nullable()->index('id_permissions');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permissions_menu');
+        Schema::dropIfExists('special_role');
     }
 };

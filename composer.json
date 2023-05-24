@@ -32,7 +32,9 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files":[
-            "app/Helper/Slack.php"
+            "app/Helper/Slack.php",
+            "app/Helper/Response.php",
+            "app/Helper/http_code/HttpCode.php"
         ]
     },
     "autoload-dev": {

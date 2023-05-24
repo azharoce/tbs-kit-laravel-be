@@ -14,12 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('dashboard.home');
+// });
 
-
-Route::get('/layout', function () {
-    return view('dashboard.index');
-});
-
+Route::get('/', [App\Http\Controllers\DashboardController::class, 'index']);
+// Route::get('/home', [App\Http\Controllers\DashboardController::class, 'layout']);

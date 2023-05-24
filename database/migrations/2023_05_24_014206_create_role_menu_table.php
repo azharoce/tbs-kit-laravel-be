@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_role', function (Blueprint $table) {
-            $table->integer('id')->primary();
+        Schema::create('role_menu', function (Blueprint $table) {
+            $table->integer('id', true);
             $table->integer('id_role')->nullable()->index('id_role');
-            $table->unsignedBigInteger('id_user')->nullable()->index('id_user');
+            $table->integer('id_menu')->nullable()->index('id_menu');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_role');
+        Schema::dropIfExists('role_menu');
     }
 };

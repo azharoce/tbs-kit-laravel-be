@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::table('permissions_menu', function (Blueprint $table) {
             $table->foreign(['id_permissions'], 'permissions_menu_ibfk_1')->references(['id'])->on('permissions')->onUpdate('NO ACTION')->onDelete('NO ACTION');
             $table->foreign(['id_menu'], 'permissions_menu_ibfk_2')->references(['id'])->on('menu')->onUpdate('NO ACTION')->onDelete('NO ACTION');
-            $table->foreign(['id_permissions'], 'permissions_menu_ibfk_3')->references(['id'])->on('permissions')->onUpdate('NO ACTION')->onDelete('NO ACTION');
-            $table->foreign(['id_menu'], 'permissions_menu_ibfk_4')->references(['id'])->on('menu')->onUpdate('NO ACTION')->onDelete('NO ACTION');
         });
     }
 
@@ -31,8 +29,6 @@ return new class extends Migration
         Schema::table('permissions_menu', function (Blueprint $table) {
             $table->dropForeign('permissions_menu_ibfk_1');
             $table->dropForeign('permissions_menu_ibfk_2');
-            $table->dropForeign('permissions_menu_ibfk_3');
-            $table->dropForeign('permissions_menu_ibfk_4');
         });
     }
 };

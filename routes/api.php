@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 // Route::post('register', [App\Http\Controllers\AuthController::class, 'register']);
 Route::get('product', [App\Http\Controllers\ProductController::class, 'sendSlack']);
 
+Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'dashboard']);
+
+
 Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
@@ -31,8 +34,18 @@ Route::group([
     Route::post('refresh', [App\Http\Controllers\AuthController::class, 'refresh']);
     Route::post('me', [App\Http\Controllers\AuthController::class, 'me']);
 });
-Route::any('{any}', function(){
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'role'
+], function ($router) {
+    Route::get('data', [App\Http\Controllers\RoleController::class, 'index']);
+    Route::post('create', [App\Http\Controllers\RoleController::class, 'store']);
+});
+
+Route::any('{any}', function () {
     return response()->json([
-    	'status' => 'error',
-        'message' => 'Resource not found'], 404);
+        'status' => 'error',
+        'message' => 'Resource not found'
+    ], 404);
 })->where('any', '.*');

@@ -1,0 +1,1 @@
+php artisan migrate:generate --tables="menu,role_menu,permissions,permissions_menu,user_role,special_role,role"

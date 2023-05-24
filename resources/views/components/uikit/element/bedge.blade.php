@@ -1,0 +1,1 @@
+<span class="badge badge-soft-success ms-auto">{{ $alert }}</span>

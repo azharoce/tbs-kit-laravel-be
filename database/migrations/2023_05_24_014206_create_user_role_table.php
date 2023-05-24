@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('permissions', function (Blueprint $table) {
-            $table->integer('id')->primary();
-            $table->string('name')->nullable();
-            $table->string('code')->nullable();
+        Schema::create('user_role', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->integer('id_role')->nullable()->index('id_role');
+            $table->unsignedBigInteger('id_user')->nullable()->index('user_role_user__fk');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists('user_role');
     }
 };
