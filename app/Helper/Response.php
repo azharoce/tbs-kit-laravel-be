@@ -1,11 +1,27 @@
 <?php
 
 
-
-function layoutJsonResponseValidate($data)
+function layoutJsonResponseValidate($message)
 {
     return response()->json(
-        $data,
-        UNPROCESSABLE_ENTITY
+        [
+            "message" => $message,
+            "status" => false,
+            "data" => [],
+        ],
+        \BAD_REQUEST
+    );
+}
+
+
+function responseSuccess($message, $data)
+{
+    return response()->json(
+        [
+            "message" => $message,
+            "status" => true,
+            "data" => $data,
+        ],
+        \OK
     );
 }

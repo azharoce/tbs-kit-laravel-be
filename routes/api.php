@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('product', [App\Http\Controllers\ProductController::class, 'sendSlack']);
 
 Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'dashboard']);
+// Route::get('menu', [App\Http\Controllers\MenuController::class, 'getMenu']);
 
 
 Route::group([
@@ -41,6 +42,15 @@ Route::group([
 ], function ($router) {
     Route::get('data', [App\Http\Controllers\RoleController::class, 'index']);
     Route::post('create', [App\Http\Controllers\RoleController::class, 'store']);
+});
+
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'menu'
+], function ($router) {
+    Route::get('data', [App\Http\Controllers\MenuController::class, 'data']);
+    Route::post('create', [App\Http\Controllers\MenuController::class, 'store']);
 });
 
 Route::any('{any}', function () {

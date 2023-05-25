@@ -5,4 +5,5 @@
 <script src="{{asset('assets/js/feather.min.js')}}"></script>
 <script src="{{asset('assets/js/app.js')}}"></script>
 <script src="{{asset('assets/custom/js/layout.js')}}"></script>
+<script>   var host = "{{ $_ENV['APP_URL'] }}"; </script>
 <div class="append_js"></div>
